@@ -36,7 +36,7 @@ module Webshot
     Capybara.register_driver :poltergeist do |app|
       Capybara::Poltergeist::Driver.new(app, {
         # Raise JavaScript errors to Ruby
-        js_errors: false,
+        js_errors: true,
         # Additional command line options for PhantomJS
         phantomjs_options: ['--ignore-ssl-errors=yes', '--ssl-protocol=any']
       })
